@@ -1,0 +1,57 @@
+/* Additions for the proposal content. The template files are left as they came. */
+
+h2 { font-size: 4.6rem; }
+h3.sub { font-size: 3rem; margin-bottom: 2rem; }
+
+/* tables hold sentences here, so let the cells wrap */
+table td, table th { white-space: normal; vertical-align: top; font-size: 1.8rem; }
+table th[scope="row"] { width: 28%; }
+.main-bg table th { color: var(--primary-color); }
+
+/* lists (the template resets all padding) */
+.proposal-list { list-style: disc; padding-left: 3rem; }
+ol.proposal-list { list-style: decimal; }
+.proposal-list li { margin-bottom: 1.5rem; }
+
+/* two column layouts */
+.two-col { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--gap); }
+.two-col h3 { font-size: 3rem; margin-bottom: 2rem; }
+.two-col ul { margin-bottom: 2rem; }
+
+.text-left { text-align: left; }
+.meta { font-size: 1.8rem; font-style: italic; }
+.sub-block { margin-top: 5rem; }
+
+/* references */
+.reference-list { list-style: none; }
+.reference-list li
+{
+    font-size: 1.7rem;
+    margin-bottom: 1.6rem;
+    padding-left: 4rem;
+    text-indent: -4rem;
+    overflow-wrap: anywhere;
+}
+.reference-list a { color: inherit; text-decoration: underline; }
+
+/* twelve menu links need a little less room */
+@media (min-width: 801px) and (max-width: 1300px)
+{
+    .menu ul li a { font-size: 1.35rem; padding: 1.6rem 0.7rem; }
+    .menu h1 { font-size: 1.8rem; }
+}
+@media (min-width: 1301px)
+{
+    .menu ul li a { font-size: 1.5rem; padding: 1.6rem 1rem; }
+}
+
+@media (max-width: 800px)
+{
+    h2 { font-size: 3.2rem; }
+    .two-col { grid-template-columns: 1fr; }
+    .reference-list li { font-size: 1.6rem; }
+}
+
+/* room for the big counter numbers above the Problem / Solution cards */
+#solution .grid-main-heading { margin-bottom: 9rem; }
+@media (max-width: 800px) { #solution .grid-main-heading { margin-bottom: 7rem; } }
